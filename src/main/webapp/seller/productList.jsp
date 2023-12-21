@@ -6,7 +6,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	List<UserDto> list=ProductDao.getInstance().getList();
+	List<ProductDto> list=ProductDao.getInstance().getList();
 %>
 <!DOCTYPE html>
 <html>
@@ -33,7 +33,7 @@
 				</tr>
 			</thead>
 			<tbody>
-			<%for(ProductDto tmp:List){ %>
+			<%for(ProductDto tmp:list){ %>
 				<tr>
 					<td><%=tmp.getProduct_id() %></td>
 					<td><%=tmp.getThumbnail() %></td>
@@ -43,6 +43,13 @@
 					<td><%=tmp.getSale_price() %></td>
 					<td><%=tmp.getSales_state() %></td>
 					<td><%=tmp.getDescription() %></td>
+					<td><a href="updateform.jsp?product_id=<%=tmp.getProduct_id()%>">수정</a></td>
+					<td>
+						<form action="productDelete.jsp" method="post">
+							<input type="hidden" name="product_id" value="<%=tmp.getProduct_id()%>"/>
+							<button type="submit">삭제</button>
+						</form>
+					</td>
 				</tr>
 			<%} %>
 			</tbody>
