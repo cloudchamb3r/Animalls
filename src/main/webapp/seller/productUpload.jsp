@@ -39,10 +39,10 @@
 	<h1>알림</h1>
 
 		<%if(isSuccess){%>
-		<p>
-			<strong><%=seller_id %></strong> 님의 판매 상품이 등록되었습니다.
-			<a href="ProductList.jsp">판매 목록보기</a>
-		</p>
+			<p>
+				<strong><%=seller_id %></strong> 님의 판매 상품이 등록되었습니다.
+				<a href="ProductList.jsp">판매 목록보기</a>
+			</p>
 		<%}else{%>
 			<p>
 				등록에 실패하였습니다. 다시 등록해주세요.
