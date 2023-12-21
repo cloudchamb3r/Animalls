@@ -7,12 +7,13 @@
 	//아이디 값
 	String id = (String)session.getAttribute("id");
 %>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
 
 <header class="p-3 border-bottom fixed-top bg-white">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
-	        <i class='fas fa-dog' style='font-size:36px'></i>
+	        <i class='fas fa-dog' style="font-size:36px"></i>
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
