@@ -1,0 +1,44 @@
+
+.flex-box {
+    display: flex;
+}
+.star-pane {
+    display: inline-block;
+    border: 0;
+    direction: rtl;
+}
+.star-pane .star {
+    mask-image: url('./empty-star.png'); 
+    -webkit-mask-image: url('./empty-star.png'); 
+    mask-size: cover; 
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    margin-right: 12px;
+    background-color: #cecece;
+}          
+.star-pane .star .half-fill { 
+    display: block;
+    min-width: 24px;
+    min-height: 48px;
+}
+.star-pane .star input[type=radio] {
+    display: none;            
+} 
+
+/* handle check */
+.star-pane .star:has(input[type=radio]:checked) ~ .star {
+    background-color: #fad103;
+}
+.star-pane .star input[type=radio]:checked ~ label {
+    background-color: #fad103;
+}
+
+/* handle hover */
+.star-pane .star:has(input[type=radio]:hover) ~ .star {
+    background-color: #fad103;
+}
+.star-pane .star input[type=radio]:hover ~ label {
+    background-color: #fad103;
+}
