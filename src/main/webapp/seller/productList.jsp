@@ -43,10 +43,10 @@
 					<td><%=tmp.getSalePrice() %></td>
 					<td><%=tmp.getSalesState() %></td>
 					<td><%=tmp.getDescription() %></td>
-					<td><a href="updateform.jsp?product_id=<%=tmp.getProductId()%>">수정</a></td>
+					<td><a href="updateform.jsp?productId=<%=tmp.getProductId()%>">수정</a></td>
 					<td>
 						<form action="productDelete.jsp" method="post">
-							<input type="hidden" name="product_id" value="<%=tmp.getProductId()%>"/>
+							<input type="hidden" name="productId" value="<%=tmp.getProductId()%>"/>
 							<button type="submit">삭제</button>
 						</form>
 					</td>

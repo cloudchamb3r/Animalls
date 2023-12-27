@@ -7,21 +7,21 @@
 <%
 	request.setCharacterEncoding("utf-8");
 
-	String seller_id=request.getParameter("seller_id");
+	String sellerId=request.getParameter("sellerId");
 	String title=request.getParameter("title");
 	String category=request.getParameter("category");
-	int org_price=Integer.parseInt(request.getParameter("org_price"));
-	int sale_price=Integer.parseInt(request.getParameter("sale_price"));
-	String sales_state=request.getParameter("sales_state");
+	int orgPrice=Integer.parseInt(request.getParameter("orgPrice"));
+	int salePrice=Integer.parseInt(request.getParameter("salePrice"));
+	String salesState=request.getParameter("salesState");
 	String description=request.getParameter("description");
 	
 	ProductDto dto=new ProductDto();
-	dto.setSellerId(seller_id);
+	dto.setSellerId(sellerId);
 	dto.setTitle(title);
 	dto.setCategory(category);
-	dto.setOrgPrice(org_price);
-	dto.setSalePrice(sale_price);
-	dto.setSalesState(sales_state);
+	dto.setOrgPrice(orgPrice);
+	dto.setSalePrice(salePrice);
+	dto.setSalesState(salesState);
 	dto.setDescription(description);
 	
 	boolean isSuccess=ProductDao.getInstance().insert(dto);
@@ -40,7 +40,7 @@
 
 		<%if(isSuccess){%>
 			<p>
-				<strong><%=seller_id %></strong> 님의 판매 상품이 등록되었습니다.
+				<strong><%=sellerId %></strong> 님의 판매 상품이 등록되었습니다.
 				<a href="ProductList.jsp">판매 목록보기</a>
 			</p>
 		<%}else{%>

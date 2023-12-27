@@ -97,8 +97,8 @@
 				<div class="flex-grow-1 justify-content-center">
 					<ul class="my-auto">
 						<li class="small">취소 : <a class="text-decoration-none small" href="#">0</a></li>
-						<li class="small">교환 : <a class="text-decoration-none small" href="#">0</a></li>
-						<li class="small">반품 : <a class="text-decoration-none small" href="#">0</a></li>
+		배송				<li class="small">교환 : <a class="text-decoration-none small" href="#">0</a></li>
+			in progress			<li class="small">반품 : <a class="text-decoration-none small" href="#">0</a></li>
 					</ul>
 				</div>
 			</div>

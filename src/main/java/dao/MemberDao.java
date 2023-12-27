@@ -32,7 +32,7 @@ public class MemberDao {
 			conn = new DbcpBean().getConn();
 			String sql = "INSERT INTO MEMBER" + 
 					" (member_id, delivery_id, password, name, nickname, role, phone_number, rank, profile_image, email, email_verified, registered_date)" + 
-					" VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE)";
+					" VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getMemberId());
 			pstmt.setInt(2, dto.getDeliveryId());
@@ -45,7 +45,6 @@ public class MemberDao {
 			pstmt.setString(9, dto.getProfileImage());
 			pstmt.setString(10, dto.getEmail());
 			pstmt.setBoolean(11, dto.isEmailVerified());
-			pstmt.setString(12, dto.getRegisteredDate());
 			rowCount = pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
