@@ -39,10 +39,10 @@
 				<img id="profileImage" width="32px" src="${pageContext.request.contextPath}/upload/<%=profile %>" alt="프로필 이미지" />
 	          </a>
 	          <ul class="dropdown-menu text-small">
-	            <li><a class="dropdown-item" href="myPage.jsp">My Page</a></li>
-	            <li><a class="dropdown-item" href="cart.jsp">Cart</a></li>
+	            <li><a class="dropdown-item" href="/Animalls/myPage.jsp">My Page</a></li>
+	            <li><a class="dropdown-item" href="/Animalls/cart.jsp">Cart</a></li>
 	            <li><hr class="dropdown-divider"></li>
-	            <li><a class="dropdown-item" href="member/logout.jsp">Sign out</a></li>
+	            <li><a class="dropdown-item" href="/Animalls/member/logout.jsp">Sign out</a></li>
 	          </ul>
 	        </div>
 		<%} else {%>
@@ -54,12 +54,11 @@
 				</svg>
 	          </a>
 	          <ul class="dropdown-menu text-small">
-	            <li><a class="dropdown-item" href="member/login_form.jsp">Login</a></li>
-	            <li><a class="dropdown-item" href="member/signup_form.jsp">Sign Up</a></li>
+	            <li><a class="dropdown-item" href="/Animalls/member/login_form.jsp">Login</a></li>
+	            <li><a class="dropdown-item" href="/Animalls/member/signup_form.jsp">Sign Up</a></li>
 	          </ul>
 	        </div>
-		<%} %>
-        
+		<%} %>    
       </div>
     </div>
   </header>
