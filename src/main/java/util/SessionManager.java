@@ -2,6 +2,9 @@ package util;
 
 import javax.servlet.http.HttpServletRequest;
 
+import dao.MemberDao;
+import dto.MemberDto;
+
 public class SessionManager {
 	private static SessionManager instance;
 	
@@ -36,4 +39,10 @@ public class SessionManager {
 		
         return (String)request.getSession().getAttribute("password");
 	}
+	
+	public String getRole(HttpServletRequest request) {
+		MemberDto dto = MemberDao.getInstance().getData(getMemberId(request));
+		if (dto == null) return "guest"; 
+		return dto.getRole();
+	}	
 }
