@@ -1,3 +1,4 @@
+<%@page import="util.SessionManager"%>
 <%@page import="dto.MemberDto"%>
 <%@page import="dao.MemberDao"%>
 <%@page import="java.util.List"%>
@@ -33,6 +34,7 @@
 	
 	int pageGroupStart = (currentPageGroup - 1) * PAGE_GROUP_SIZE + 1;
 	int pageGroupEnd = Math.min(pageGroupStart + PAGE_GROUP_SIZE - 1, lastPostPage);
+	
 %>
 <!DOCTYPE html>
 <html>
@@ -74,6 +76,15 @@
 			</table>
 		</div>
 		
+		
+		<% if ("user".equals(SessionManager.getInstance().getRole(request))) { %>
+			<!--  현재는 테스트를 위해 user 로 테스트를 하도록 했습니다. 추후에는 admin 권한을 가진 유저만 글을 쓸 수 있도록 해야합니다 -->
+			<div class="d-flex justify-content-end">
+				<div>
+					<a href='noticeInsertform.jsp' class='btn btn-primary'>새 글쓰기</a>
+				</div>
+			</div>
+		<% } %>
 		<nav aria-label="page navigator">
 		  <ul class="pagination justify-content-center">
 		    <li class="page-item <%= currentPageGroup == 1 ? "disabled" : "" %>">

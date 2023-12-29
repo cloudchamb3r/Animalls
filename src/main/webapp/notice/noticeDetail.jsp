@@ -50,7 +50,6 @@
 		<a class="btn border text-decoration-none text-reset my-4" href="noticeList.jsp">
 			목록 보기
 		</a>
-		
 	</div>	
 	
 	<jsp:include page="/include/footer.jsp">
