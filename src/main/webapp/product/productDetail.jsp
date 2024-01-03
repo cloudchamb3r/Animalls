@@ -318,10 +318,10 @@
     			getReviewStats: async function() {
     				const resp = await fetch(`/Animalls/api/review/stats?productId=<%= productId %>`);
     				const json = await resp.json(); 
+    				this.review_stat = json;
     				if (json.avg_review == 'NaN') {
     					json.avg_review = '0';
     				}
-    				this.review_stat = json;
     			},
     			createStar: function (rating) {
     				const arr = []; 

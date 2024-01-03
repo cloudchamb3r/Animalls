@@ -132,7 +132,11 @@
 		methods: {
 			getReviewStats: async function() {
 				const resp = await fetch(`/Animalls/api/review/stats?productId=<%= productId %>`);
-				this.review_stat = await resp.json(); 
+				const json = await resp.json(); 
+				this.review_stat = await resp.json();
+				if (json.avg_review == 'NaN') {
+					json.avg_review = '0';
+				}
 			},
 		}, 
 		created: function() {
