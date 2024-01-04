@@ -12,7 +12,6 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class ProductDto {
 	@SerializedName("product_id")
 	private int productId;

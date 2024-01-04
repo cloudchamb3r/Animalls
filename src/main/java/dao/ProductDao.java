@@ -179,7 +179,7 @@ public class ProductDao {
 			pstmt.setInt(6, dto.getSalePrice());
 			pstmt.setString(7, dto.getSalesState());
 			pstmt.setString(8, dto.getThumbnail());
-			
+		
 			rowCount = pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
